@@ -199,41 +199,41 @@ body{
 @media (max-width: 600px){
 
     .tarjeta-final{
-        width:90%;
-        height:85vh;
+        height:auto;
+        min-height:95vh;
+        padding-bottom:30px;
     }
 
     .texto-amor{
-        left:20px;
-        top:20px;
-        width:150px;
-        font-size:12px;
-        line-height:1.4;
-        z-index:10;
+        position:relative;
+        left:auto;
+        top:auto;
+        width:85%;
+        margin:420px auto 0 auto;
+        font-size:15px;
+        text-align:center;
     }
 
     .arbol{
-        right:-40px;
-        top:80px;
-        transform:scale(0.55);
-        transform-origin:top right;
+        position:absolute;
+        top:10px;
+        left:50%;
+        right:auto;
+        transform:translateX(-50%) scale(0.55);
+        transform-origin:top center;
     }
 
     .contador{
-        left:20px;
-        bottom:85px;
-        width:180px;
-    }
-
-    .contador p{
-        font-size:12px;
-    }
-
-    .contador h3{
-        font-size:11px;
+        position:relative;
+        left:auto;
+        bottom:auto;
+        width:85%;
+        margin:20px auto;
+        text-align:center;
+        background:transparent;
     }
 
     .linea-piso{
-        bottom:80px;
+        display:none;
     }
 }
