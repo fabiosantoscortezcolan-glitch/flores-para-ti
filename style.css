@@ -198,41 +198,50 @@ body{
 
 @media (max-width: 600px){
 
+    .tarjeta-final{
+        width:90%;
+        height:85vh;
+        min-height:580px;
+    }
+
     .texto-amor{
-        left:18px;
+        left:20px;
         top:25px;
         width:160px;
         font-size:16px;
-        line-height:1.45;
+        line-height:1.55;
+        text-align:left;
         z-index:20;
     }
 
     .arbol{
         position:absolute;
-        right:-80px;
-        top:290px;
-        transform:scale(0.52);
+        right:-95px;
+        top:265px;
+        width:430px;
+        height:350px;
+        transform:scale(0.55);
         transform-origin:top right;
     }
 
     .contador{
-        left:18px;
-        bottom:78px;
-        width:200px;
-        z-index:20;
+        left:20px;
+        bottom:90px;
+        width:190px;
         background:#efe5da;
+        z-index:30;
     }
 
     .contador p{
-        font-size:12px;
+        font-size:11px;
     }
 
     .contador h3{
         font-size:11px;
-        line-height:1.2;
+        line-height:1.15;
     }
 
     .linea-piso{
-        bottom:70px;
+        bottom:80px;
     }
 }
