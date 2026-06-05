@@ -1,0 +1,197 @@
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg, #ff0080, #7a003c);
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+}
+
+#inicio, #final{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#final{
+    display:none;
+}
+
+.tarjeta-inicio, .tarjeta-final{
+    width:90%;
+    max-width:900px;
+    height:520px;
+    background:#efe5da;
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.tarjeta-inicio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flor-inicio{
+    width:90px;
+    cursor:pointer;
+    animation:latir 1.5s infinite;
+}
+
+.tarjeta-inicio span{
+    color:#7a4a2a;
+    font-size:24px;
+    border-bottom:2px solid #7a4a2a;
+    padding-bottom:3px;
+    margin-left:-5px;
+}
+
+@keyframes latir{
+    50%{ transform:scale(1.15); }
+}
+
+.texto-amor{
+    position:absolute;
+    left:55px;
+    top:70px;
+    width:270px;
+    color:#3b2a20;
+    font-size:18px;
+    line-height:1.5;
+    white-space:pre-line;
+    z-index:8;
+}
+
+.arbol{
+    position:absolute;
+    right:80px;
+    top:45px;
+    width:430px;
+    height:350px;
+}
+
+
+/* CORAZÓN DE GIRASOLES */
+#corazon{
+    position:absolute;
+    left:0;
+    top:0;
+    width:430px;
+    height:280px;
+    z-index:5;
+}
+
+.flor{
+    position:absolute;
+    width:16px;
+    height:16px;
+    opacity:0;
+    object-fit:contain;
+    animation:aparecer 0.8s forwards;
+    filter:drop-shadow(0 1px 1px rgba(0,0,0,0.25));
+}
+
+@keyframes aparecer{
+    from{
+        transform:scale(0) rotate(0deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1) rotate(360deg);
+        opacity:1;
+    }
+}
+
+/* TRONCO */
+.tronco{
+    position:absolute;
+    left:200px;
+    bottom:-55px;
+    width:40px;
+    height:110px;
+    background:#9b5a1f;
+    clip-path:polygon(
+        20% 0%,
+        80% 0%,
+        100% 100%,
+        0% 100%
+    );
+    z-index:4;
+}
+
+/* CONTADOR */
+.contador{
+    position:absolute;
+    left:40px;
+    bottom:72px;
+    color:#4a3428;
+    z-index:10;
+    background:#efe5da;
+    padding-right:10px;
+}
+
+.contador p{
+    margin:0;
+    font-size:17px;
+}
+
+.contador h3{
+    margin:5px 0 0;
+    font-size:18px;
+}
+
+/* LÍNEA DEL PISO */
+.linea-piso{
+    position:absolute;
+    left:0;
+    bottom:70px;
+    width:100%;
+    height:3px;
+    background:#2b1b12;
+    z-index:1;
+}
+
+/* FLORES VOLANDO */
+.flor-caida{
+    position:absolute;
+    width:19px;
+    height:19px;
+    object-fit:contain;
+    z-index:9;
+    opacity:0;
+    filter:drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+    animation:caidaRealista 3.6s linear forwards;
+}
+
+@keyframes caidaRealista{
+    0%{
+        transform:translate(0,0) scale(0.9) rotate(0deg);
+        opacity:0;
+    }
+
+    8%{
+        opacity:1;
+    }
+
+    25%{
+        transform:translate(var(--x1), var(--y1)) scale(1) rotate(90deg);
+        opacity:1;
+    }
+
+    50%{
+        transform:translate(var(--x2), var(--y2)) scale(0.95) rotate(190deg);
+        opacity:1;
+    }
+
+    75%{
+        transform:translate(var(--x3), var(--y3)) scale(0.85) rotate(310deg);
+        opacity:0.8;
+    }
+
+    100%{
+        transform:translate(var(--x4), var(--y4)) scale(0.65) rotate(460deg);
+        opacity:0;
+    }
+}

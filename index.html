@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA INICIAL -->
+    <section id="inicio">
+        <div class="tarjeta-inicio">
+            <img src="img/Girasol.png" class="flor-inicio" onclick="mostrarFinal()">
+            <span>Flores Para Ti</span>
+        </div>
+    </section>
+
+    <!-- PANTALLA FINAL -->
+    <section id="final">
+        <div class="tarjeta-final">
+
+            <div class="texto-amor" id="textoAmor"></div>
+
+            <div class="arbol">
+
+                <div class="tronco"></div>
+
+                <div id="corazon"></div>
+
+            </div>
+
+            <div class="contador">
+                <p>Mi amor por ti comenzó hace...</p>
+                <h3 id="contador"></h3>
+            </div>
+
+            <div class="linea-piso"></div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
