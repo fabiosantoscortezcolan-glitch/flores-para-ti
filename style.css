@@ -198,32 +198,69 @@ body{
 
 @media (max-width: 600px){
 
-    .texto-amor{
-        left:20px;
-        top:20px;
-        width:140px;
-        font-size:12px;
-        line-height:1.4;
+    .tarjeta-final{
+        width:90%;
+        height:85vh;
+        min-height:580px;
     }
 
+    /* TEXTO */
+    .texto-amor{
+        left:25px;
+        top:25px;
+
+        width:180px;
+
+        font-size:14px;
+        line-height:1.7;
+
+        text-align:left;
+        white-space:pre-line;
+
+        z-index:20;
+    }
+
+    /* ÁRBOL */
     .arbol{
-        right:-70px;
-        top:70px;
+        position:absolute;
+
+        right:10px; /* mueve el árbol a la izquierda */
+        top:300px;
+
+        width:430px;
+        height:350px;
+
         transform:scale(0.50);
         transform-origin:top right;
     }
 
+    /* TRONCO */
+    .tronco{
+        bottom:-25px;
+    }
+
+    /* CONTADOR */
     .contador{
-        left:20px;
-        bottom:85px;
-        width:170px;
+        left:25px;
+        bottom:90px;
+
+        width:220px;
+
+        background:#efe5da;
+        z-index:30;
     }
 
     .contador p{
-        font-size:12px;
+        font-size:11px;
     }
 
     .contador h3{
         font-size:11px;
+        line-height:1.2;
+    }
+
+    /* LÍNEA */
+    .linea-piso{
+        bottom:80px;
     }
 }
