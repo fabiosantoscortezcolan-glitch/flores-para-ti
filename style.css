@@ -195,3 +195,45 @@ body{
         opacity:0;
     }
 }
+
+@media (max-width: 600px){
+
+    .tarjeta-final{
+        width:90%;
+        height:85vh;
+    }
+
+    .texto-amor{
+        left:20px;
+        top:20px;
+        width:150px;
+        font-size:12px;
+        line-height:1.4;
+        z-index:10;
+    }
+
+    .arbol{
+        right:-40px;
+        top:80px;
+        transform:scale(0.55);
+        transform-origin:top right;
+    }
+
+    .contador{
+        left:20px;
+        bottom:85px;
+        width:180px;
+    }
+
+    .contador p{
+        font-size:12px;
+    }
+
+    .contador h3{
+        font-size:11px;
+    }
+
+    .linea-piso{
+        bottom:80px;
+    }
+}
