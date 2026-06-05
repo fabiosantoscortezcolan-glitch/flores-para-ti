@@ -198,17 +198,11 @@ body{
 
 @media (max-width: 600px){
 
-    .tarjeta-final{
-        width:90%;
-        height:85vh;
-        min-height:580px;
-    }
-
     .texto-amor{
-        left:25px;
-        top:25px;
-        width:190px;
-        font-size:14px;
+        left:35px;
+        top:70px;
+        width:220px;
+        font-size:18px;
         line-height:1.6;
         text-align:left;
         z-index:20;
@@ -217,31 +211,27 @@ body{
     .arbol{
         position:absolute;
         left:50%;
+        top:250px;   /* baja el árbol */
         right:auto;
-        top:130px;
-        transform:translateX(-50%) scale(0.55);
+        transform:translateX(-50%) scale(0.60);
         transform-origin:top center;
     }
 
     .contador{
-        left:25px;
+        left:30px;
         bottom:85px;
-        width:230px;
-        font-size:12px;
-        background:#efe5da;
+        width:250px;
     }
 
     .contador p{
-        font-size:13px;
+        font-size:18px;
     }
 
     .contador h3{
-        font-size:12px;
-        line-height:1.2;
+        font-size:15px;
     }
 
     .linea-piso{
-        display:block;
         bottom:80px;
     }
 }
