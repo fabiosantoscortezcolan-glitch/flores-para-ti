@@ -211,7 +211,7 @@ body{
     .arbol{
         position:absolute;
         left:50%;
-        top:250px;   /* baja el árbol */
+        top:750px;   /* baja el árbol */
         right:auto;
         transform:translateX(-50%) scale(0.60);
         transform-origin:top center;
