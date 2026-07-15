@@ -79,13 +79,32 @@ function crearFlorCaida(){
     flor.src = "img/Girasol.png";
     flor.classList.add("flor-caida");
 
-    const puntos = [
-        {x:520, y:120}, {x:570, y:100}, {x:630, y:95},
-        {x:700, y:110}, {x:760, y:135}, {x:500, y:180},
-        {x:560, y:170}, {x:630, y:165}, {x:710, y:175},
-        {x:550, y:235}, {x:610, y:250}, {x:670, y:240},
-        {x:620, y:315}
-    ];
+    const esCelular = window.innerWidth <= 600;
+
+const puntos = esCelular
+? [
+    {x:270, y:170},
+    {x:285, y:165},
+    {x:300, y:160},
+    {x:315, y:165},
+    {x:330, y:170},
+    {x:300, y:190}
+]
+: [
+    {x:520, y:120},
+    {x:570, y:100},
+    {x:630, y:95},
+    {x:700, y:110},
+    {x:760, y:135},
+    {x:500, y:180},
+    {x:560, y:170},
+    {x:630, y:165},
+    {x:710, y:175},
+    {x:550, y:235},
+    {x:610, y:250},
+    {x:670, y:240},
+    {x:620, y:315}
+];
 
     const punto = puntos[Math.floor(Math.random() * puntos.length)];
 
