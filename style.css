@@ -222,22 +222,20 @@ body{
 
     /* ÁRBOL */
     .arbol{
-        position:absolute;
+    position:absolute;
+    right:10px;          /* mueve un poco a la izquierda */
+    top:240px;           /* sube el corazón */
+    width:430px;
+    height:350px;
 
-        right:10px; /* mueve el árbol a la izquierda */
-        top:300px;
-
-        width:430px;
-        height:350px;
-
-        transform:scale(0.50);
-        transform-origin:top right;
-    }
+    transform:scale(0.50);
+    transform-origin:top right;
+}
 
     /* TRONCO */
     .tronco{
-        bottom:-200px;
-    }
+    bottom:15px;         /* el tronco sube hasta la línea */
+}
 
     /* CONTADOR */
     .contador{
