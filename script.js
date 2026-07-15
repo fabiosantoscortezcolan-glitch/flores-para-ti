@@ -108,8 +108,19 @@ const puntos = esCelular
 
     const punto = puntos[Math.floor(Math.random() * puntos.length)];
 
+if(window.innerWidth <= 600){
+
+    // SOLO EN CELULAR
+    flor.style.left = "300px";
+    flor.style.top = "250px";
+
+}else{
+
+    // PC (queda igual)
     flor.style.left = punto.x + "px";
     flor.style.top = punto.y + "px";
+
+}
 
     const lineaY = 450;
     const distancia = lineaY - punto.y;
