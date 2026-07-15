@@ -73,67 +73,50 @@ function crearCorazon(){
 
 /* FLORES SALEN DEL ÁRBOL Y CAEN */
 function crearFlorCaida(){
+
     const tarjeta = document.querySelector(".tarjeta-final");
+    const arbol = document.querySelector(".arbol");
+
     const flor = document.createElement("img");
-
     flor.src = "img/Girasol.png";
-    flor.classList.add("flor-caida");
+    flor.className = "flor-caida";
 
-    const esCelular = window.innerWidth <= 600;
+    // Posición real del árbol
+    const rectArbol = arbol.getBoundingClientRect();
+    const rectTarjeta = tarjeta.getBoundingClientRect();
 
-const puntos = esCelular
-? [
-    {x:270, y:170},
-    {x:285, y:165},
-    {x:300, y:160},
-    {x:315, y:165},
-    {x:330, y:170},
-    {x:300, y:190}
-]
-: [
-    {x:520, y:120},
-    {x:570, y:100},
-    {x:630, y:95},
-    {x:700, y:110},
-    {x:760, y:135},
-    {x:500, y:180},
-    {x:560, y:170},
-    {x:630, y:165},
-    {x:710, y:175},
-    {x:550, y:235},
-    {x:610, y:250},
-    {x:670, y:240},
-    {x:620, y:315}
-];
+    // Base del corazón (donde nace el tronco)
+    const inicioX =
+        rectArbol.left - rectTarjeta.left +
+        rectArbol.width / 2 +
+        (Math.random() * 40 - 20);
 
-    const punto = puntos[Math.floor(Math.random() * puntos.length)];
+    const inicioY =
+        rectArbol.top - rectTarjeta.top +
+        rectArbol.height * 0.63 +
+        (Math.random() * 15);
 
-    flor.style.left = punto.x + "px";
-    flor.style.top = punto.y + "px";
+    flor.style.left = inicioX + "px";
+    flor.style.top = inicioY + "px";
 
-    const lineaY = 450;
-    const distancia = lineaY - punto.y;
-    const desviacion = Math.random() * 120 - 60;
+    const distancia = 220 + Math.random() * 40;
 
-    flor.style.setProperty("--x1", (-70 + desviacion * 0.2) + "px");
-    flor.style.setProperty("--y1", (distancia * 0.25) + "px");
+    flor.style.setProperty("--x1", (-20 + Math.random()*20) + "px");
+    flor.style.setProperty("--y1", "40px");
 
-    flor.style.setProperty("--x2", (-150 + desviacion * 0.5) + "px");
-    flor.style.setProperty("--y2", (distancia * 0.50) + "px");
+    flor.style.setProperty("--x2", (-70 + Math.random()*30) + "px");
+    flor.style.setProperty("--y2", "90px");
 
-    flor.style.setProperty("--x3", (-240 + desviacion * 0.8) + "px");
-    flor.style.setProperty("--y3", (distancia * 0.75) + "px");
+    flor.style.setProperty("--x3", (-140 + Math.random()*40) + "px");
+    flor.style.setProperty("--y3", "160px");
 
-    flor.style.setProperty("--x4", (-340 + desviacion) + "px");
-    flor.style.setProperty("--y4", (distancia + 20) + "px");
+    flor.style.setProperty("--x4", (-220 + Math.random()*60) + "px");
+    flor.style.setProperty("--y4", distancia + "px");
 
     tarjeta.appendChild(flor);
 
-    setTimeout(() => {
-        flor.remove();
-    }, 3600);
+    setTimeout(() => flor.remove(), 3600);
 }
-
 /* CONTADOR */
 function actualizarContador(){
     const inicio = new Date("2021-04-10T00:00:00");
