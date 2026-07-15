@@ -111,8 +111,8 @@ const puntos = esCelular
 if(window.innerWidth <= 600){
 
     // SOLO EN CELULAR
-    flor.style.left = "300px";
-    flor.style.top = "250px";
+    flor.style.left = "295px";
+    flor.style.top = "240px";
 
 }else{
 
