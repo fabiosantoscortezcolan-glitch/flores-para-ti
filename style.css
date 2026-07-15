@@ -234,7 +234,7 @@ body{
 
     /* TRONCO */
     .tronco{
-    bottom:15px;         /* el tronco sube hasta la línea */
+    bottom:-55px;         
 }
 
     /* CONTADOR */
